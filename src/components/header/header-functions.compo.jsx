@@ -1,7 +1,6 @@
 import React from 'react';
 import {ReactComponent as Logo} from '../../Logo/star-wars.svg';
 import {Link} from "react-router-dom";
-import {auth} from '../../firebase/firebase.js'
 import './header-function.style.scss';
 
 const Header= ({currentUser}) =>(
@@ -13,16 +12,13 @@ const Header= ({currentUser}) =>(
         </Link>
 
             <div className='menu-top-options'>
-                <Link className='option' to='/shop'>
-                    Shop
-                </Link>
-                <Link className='option' to='/shop'>
-                    Contact Us
+                <Link className='option' to='/save'>
+                    Save
                 </Link>
                
                 {
                     currentUser?
-                    <div className='option' onClick={()=>auth.signOut()}>Sign Out</div>
+                    <div className='option' onClick>Sign Out</div>
                     :
                     <Link className='option' to='/register'>
                     Log In

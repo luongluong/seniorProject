@@ -1,6 +1,6 @@
 import React from'react';
 import './sign-up.style.scss';
-import {auth, createUserProfileDocument} from '../../firebase/firebase.js';
+//import {auth, createUserProfileDocument} from '../../firebase/firebase.js';
 // need to add Auth from google for 
 
 class Signup extends React.Component{
@@ -28,7 +28,7 @@ class Signup extends React.Component{
             console.log("entered the try catch");
             // this is sending a command to the backend to create the user
             // then returns a user object with the varibles email and password  
-            var {user} = await auth.createUserWithEmailAndPassword(email, password);
+            var user; //= await auth.createUserWithEmailAndPassword(email, password);
             console.log("starting the function call ");
             // because to create the user entry in the db we beed also a username 
             // thus in js we can just create a new object with a username field 
@@ -36,7 +36,7 @@ class Signup extends React.Component{
             user.userName = username;
             // parameters require const variables 
             const superUser = user
-           await createUserProfileDocument(superUser);
+           //await createUserProfileDocument(superUser);
 
            this.setState({
             username:'',

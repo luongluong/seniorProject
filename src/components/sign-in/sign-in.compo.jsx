@@ -1,6 +1,6 @@
 import React from 'react';
 import './sign-in.style.scss';
-import {auth} from '../../firebase/firebase.js';
+//import {auth} from '../../firebase/firebase.js';
 
 //import { Form,FormGroup, Label, Input} from 'reactapp';
 //import { Button, FormControl, ControlLabel } from "react-bootstrap";
@@ -24,7 +24,7 @@ class SignIn extends React.Component{
       console.log("made it into the submit event");
       try{
         // creates the object 
-        await auth.signInWithEmailAndPassword(email, password);
+        //await auth.signInWithEmailAndPassword(email, password);
         this.setState({email:'', password:''});
 
       } catch(error){
@@ -42,15 +42,7 @@ class SignIn extends React.Component{
       this.setState({ [name] : value });
   };
 
-/*    valEmail = event =>{
-      const {email ,setmail}=  event.target;
 
-      this.setState({ [email]: setmail });
-    }
-    valPass = event =>{
-      const {pass ,setPass}=  event.target;
-      this.setState({ [pass]: setPass });
-    }   */
 
     
     render(){
