@@ -22,9 +22,9 @@ class App extends React.Component {
      <BrowserRouter>
         <Header currentUser={this.state.currentUser}/>
         <Switch>
-          <Route  exact path='/' component={Homepage}></Route>/>
-          <Route  path='/save' component={Homepage}></Route>/>
-          <Route  path='/register' component={SigninAndUp}></Route>/>
+          <Route  exact path='/' component={Homepage}></Route>
+          <Route  path='/save' component={Homepage}></Route>
+          <Route  path='/register' component={SigninAndUp}></Route>
           <Route path='/Sign-up'component={signUp}></Route>
        </Switch>
     </BrowserRouter>
